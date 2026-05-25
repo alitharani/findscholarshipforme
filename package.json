@@ -1,7 +1,7 @@
 {
   "name": "findscholarshipforme",
-  "version": "2.0.0",
-  "description": "AI-powered personal scholarship agent",
+  "version": "3.0.0",
+  "description": "AI-powered personal scholarship agent — powered by Groq",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +11,6 @@
     "dotenv": "^16.3.1",
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
-    "express-rate-limit": "^7.1.5",
-    "@anthropic-ai/sdk": "^0.24.0"
+    "express-rate-limit": "^7.1.5"
   }
 }

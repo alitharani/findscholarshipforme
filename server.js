@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
 
@@ -11,12 +10,6 @@ const PORT = process.env.PORT || 3000;
 
 // ── Middleware ───────────────────────────────────
 app.use(cors({ origin: '*' }));
-app.use(helmet({ 
-  contentSecurityPolicy: false,
-  crossOriginResourcePolicy: { policy: 'cross-origin' },
-  crossOriginOpenerPolicy: false,
-  crossOriginEmbedderPolicy: false
-}));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 

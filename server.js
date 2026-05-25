@@ -10,12 +10,13 @@ app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 
 // ── Middleware ───────────────────────────────────
+app.use(cors({ origin: '*' }));
 app.use(helmet({ 
   contentSecurityPolicy: false,
-  crossOriginResourcePolicy: false,
+  crossOriginResourcePolicy: { policy: 'cross-origin' },
+  crossOriginOpenerPolicy: false,
   crossOriginEmbedderPolicy: false
 }));
-app.use(cors({ origin: '*' }));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 

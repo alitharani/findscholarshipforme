@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>FindScholarshipForMe — Your Personal AI Scholarship Agent</title>
+<meta name="description" content="Find scholarships worldwide with your personal AI agent. Get matched with 2,400+ scholarships in 54 countries — free, instant, personalized."/>
+<meta name="keywords" content="scholarship finder, international scholarships, AI scholarship, study abroad, DAAD, Chevening, fully funded scholarships"/>
+<meta property="og:title" content="FindScholarshipForMe — AI Scholarship Agent"/>
+<meta property="og:description" content="Your personal AI agent finds scholarships built for you across 54 countries."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://findscholarshipforme.com"/>
+<link rel="canonical" href="https://findscholarshipforme.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     LANDING PAGE
+══════════════════════════════════════════ -->
+<div id="pg-landing">
+
+  <!-- NAV -->
+  <header class="nav" id="main-nav">
+    <div class="nav-inner">
+      <a class="logo" href="#"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#how">How it works</a>
+        <a href="#countries">Countries</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="btn-cta" onclick="APP.startOnboarding()">Start free <i class="ti ti-arrow-right"></i></button>
+      <button class="nav-mob-btn" onclick="APP.startOnboarding()" aria-label="Get started"><i class="ti ti-arrow-right"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-badge"><span class="badge-dot"></span> AI-powered · 2,400+ scholarships · 54 countries</div>
+      <h1 class="hero-h1">Your personal AI agent<br/>finds scholarships<br/><em>built for you</em></h1>
+      <p class="hero-p">Tell us who you are. Get matched with every scholarship you qualify for — with costs, deadlines, and a personal guide to get you there.</p>
+      <div class="hero-actions">
+        <button class="btn-hero" onclick="APP.startOnboarding()"><i class="ti ti-sparkles"></i> Find my scholarships — free</button>
+        <a href="#how" class="btn-hero-ghost">See how it works</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><strong>2,400+</strong><span>Scholarships tracked</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><strong>54</strong><span>Countries covered</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><strong>Free</strong><span>Always, forever</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><strong>24/7</strong><span>Agent available</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section" aria-label="How it works">
+    <div class="container">
+      <div class="sec-label">How it works</div>
+      <h2 class="sec-title">Scholarship clarity in <em>5 minutes</em></h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-num">01</div>
+          <div class="how-icon"><i class="ti ti-user-circle"></i></div>
+          <h3>Build your profile</h3>
+          <p>Enter your academics, English level, finances, and target countries. Your agent learns everything about you.</p>
+        </div>
+        <div class="how-arrow"><i class="ti ti-arrow-right"></i></div>
+        <div class="how-card">
+          <div class="how-num">02</div>
+          <div class="how-icon"><i class="ti ti-cpu"></i></div>
+          <h3>AI analyzes</h3>
+          <p>Your agent cross-references your profile against 2,400+ scholarships — calculating match scores instantly.</p>
+        </div>
+        <div class="how-arrow"><i class="ti ti-arrow-right"></i></div>
+        <div class="how-card">
+          <div class="how-num">03</div>
+          <div class="how-icon"><i class="ti ti-chart-bar"></i></div>
+          <h3>Get your report</h3>
+          <p>See match %, full cost breakdowns, deadlines, and scholarships sorted by your eligibility.</p>
+        </div>
+        <div class="how-arrow"><i class="ti ti-arrow-right"></i></div>
+        <div class="how-card">
+          <div class="how-num">04</div>
+          <div class="how-icon"><i class="ti ti-message-circle"></i></div>
+          <h3>Agent guides you</h3>
+          <p>Your agent helps with documents, SOP writing, visa guidance, deadlines — available 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTRIES -->
+  <section id="countries" class="section section-dark" aria-label="Countries">
+    <div class="container">
+      <div class="sec-label light">Top destinations</div>
+      <h2 class="sec-title light">Where will <em>you</em> study?</h2>
+      <div class="countries-grid">
+        <div class="c-card"><div class="c-flag">🇩🇪</div><div class="c-name">Germany</div><div class="c-tag">Free tuition</div><div class="c-desc">DAAD · Böll · Adenauer · €0 tuition at public unis</div></div>
+        <div class="c-card"><div class="c-flag">🇹🇷</div><div class="c-name">Turkey</div><div class="c-tag">Full ride</div><div class="c-desc">Türkiye Burslari · All costs covered · No IELTS</div></div>
+        <div class="c-card"><div class="c-flag">🇨🇳</div><div class="c-name">China</div><div class="c-tag">5,000+ spots</div><div class="c-desc">CSC Scholarship · Stipend + housing + flight</div></div>
+        <div class="c-card"><div class="c-flag">🇰🇷</div><div class="c-name">South Korea</div><div class="c-tag">KGSP</div><div class="c-desc">Full funding · Language training · $900/mo stipend</div></div>
+        <div class="c-card"><div class="c-flag">🇬🇧</div><div class="c-name">United Kingdom</div><div class="c-tag">Prestigious</div><div class="c-desc">Commonwealth · Chevening · Gates Cambridge</div></div>
+        <div class="c-card"><div class="c-flag">🇯🇵</div><div class="c-name">Japan</div><div class="c-tag">MEXT</div><div class="c-desc">Full govt funding · Housing + stipend · Renowned</div></div>
+        <div class="c-card"><div class="c-flag">🇳🇱</div><div class="c-name">Netherlands</div><div class="c-tag">English-taught</div><div class="c-desc">Holland Scholarship · Orange Tulip · 2,000+ English programs</div></div>
+        <div class="c-card"><div class="c-flag">🇨🇦</div><div class="c-name">Canada</div><div class="c-tag">Merit-based</div><div class="c-desc">Vanier · Banting · University-specific awards</div></div>
+        <div class="c-card c-card-cta" onclick="APP.startOnboarding()"><div class="c-cta-icon"><i class="ti ti-plus"></i></div><div class="c-name">+46 more</div><div class="c-desc">Find countries matching your profile specifically</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" aria-label="Features">
+    <div class="container">
+      <div class="sec-label">What your agent does</div>
+      <h2 class="sec-title">Everything in <em>one place</em></h2>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-search"></i></div><h3>Scholarship matching</h3><p>Finds every scholarship you qualify for — with a % match score based on your exact profile.</p></div>
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-list-numbers"></i></div><h3>Step-by-step guide</h3><p>Full application walkthrough for each scholarship — what to do, when, and how.</p></div>
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-file-check"></i></div><h3>Document checklist</h3><p>Exact documents needed per scholarship — transcripts, references, essays, and more.</p></div>
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-calendar-event"></i></div><h3>Deadline tracker</h3><p>Month-by-month timeline so you never miss a deadline. Your agent keeps you on track.</p></div>
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-writing"></i></div><h3>SOP & essay writer</h3><p>Your agent drafts a personalized Statement of Purpose tailored to each scholarship.</p></div>
+        <div class="feat-card"><div class="feat-ico"><i class="ti ti-plane"></i></div><h3>Visa & cost guide</h3><p>Full breakdown of tuition, living costs, visa process, and flight costs per country.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-tint" aria-label="Testimonials">
+    <div class="container">
+      <div class="sec-label">Student stories</div>
+      <h2 class="sec-title">Real students. <em>Real results.</em></h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"I had no idea Germany offered fully-funded master's programs in English. The AI found 6 scholarships I qualified for in under 5 minutes."</p>
+          <div class="testi-auth"><div class="testi-av">FA</div><div><strong>Fatima A.</strong><span>Cairo, Egypt · MSc Engineering</span></div></div>
+        </div>
+        <div class="testi-card testi-card-highlight">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Got matched with Türkiye Burslari — a fully funded PhD in engineering. My agent walked me through every single document. Applied and got in."</p>
+          <div class="testi-auth"><div class="testi-av">AM</div><div><strong>Ahmed M.</strong><span>Karachi, Pakistan · PhD Mechanical Eng</span></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The cost breakdown changed everything. I finally understood exactly what studying in Canada vs Netherlands would actually cost me."</p>
+          <div class="testi-auth"><div class="testi-av">RK</div><div><strong>Ravi K.</strong><span>Mumbai, India · MBA</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section" aria-label="FAQ">
+    <div class="container faq-wrap">
+      <div class="sec-label">FAQ</div>
+      <h2 class="sec-title">Common questions</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">Is this completely free? <i class="ti ti-chevron-down"></i></button><div class="faq-a">Yes — FindScholarshipForMe is 100% free. No credit card, no signup fees, no hidden charges. Your AI agent is always available.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">How accurate are the match percentages? <i class="ti ti-chevron-down"></i></button><div class="faq-a">Match scores are calculated by comparing your profile against each scholarship's official eligibility criteria — academics, language, country, financial need, and field of study. They're a strong guide but always verify final eligibility directly with the scholarship body.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">Do I need IELTS to apply? <i class="ti ti-chevron-down"></i></button><div class="faq-a">It depends on the scholarship and country. Germany, Netherlands, and Scandinavia typically require IELTS 6.0–6.5. Turkey and China often don't require it. Your agent will specify requirements for every scholarship it recommends you.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">Which countries have the most fully-funded scholarships? <i class="ti ti-chevron-down"></i></button><div class="faq-a">Germany, Turkey, China, South Korea, and Japan offer the most fully-funded government scholarships for international students. The UK and Netherlands have strong university-specific merit awards.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">Can the agent write my SOP? <i class="ti ti-chevron-down"></i></button><div class="faq-a">Yes. Your agent will draft a personalized Statement of Purpose tailored to your background, target scholarship, and specific field. You can refine it through conversation until it's exactly right.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="FAQ.toggle(this)">Is my data saved? <i class="ti ti-chevron-down"></i></button><div class="faq-a">Your profile is saved locally in your browser so your agent remembers you next time. We don't store personal data on our servers — your profile stays on your device.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + CONTACT -->
+  <section id="about" class="section section-tint" aria-label="About">
+    <div class="container about-wrap">
+      <div class="about-text">
+        <div class="sec-label">About</div>
+        <h2 class="sec-title">Built so every student<br/><em>gets a fair shot</em></h2>
+        <p>Millions of scholarships go unclaimed every year — not because students aren't qualified, but because they never knew the opportunity existed. FindScholarshipForMe bridges that gap with AI.</p>
+        <p style="margin-top:1rem">Tell us who you are. We'll tell you exactly where and how to apply.</p>
+        <div class="about-stats">
+          <div class="astat"><div class="astat-n">2,400+</div><div class="astat-l">Scholarships</div></div>
+          <div class="astat"><div class="astat-n">54</div><div class="astat-l">Countries</div></div>
+          <div class="astat"><div class="astat-n">Free</div><div class="astat-l">Always</div></div>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3>Get in touch</h3>
+        <p>Questions, partnerships, or scholarship data corrections</p>
+        <div class="contact-fields">
+          <input type="text" placeholder="Your name" class="c-input"/>
+          <input type="email" placeholder="Email address" class="c-input"/>
+          <textarea placeholder="Your message..." class="c-input c-textarea"></textarea>
+          <button class="btn-cta" style="width:100%;justify-content:center">Send message <i class="ti ti-arrow-right"></i></button>
+        </div>
+        <div class="contact-info">
+          <span><i class="ti ti-world"></i> findscholarshipforme.com</span>
+          <span><i class="ti ti-mail"></i> hello@findscholarshipforme.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="container cta-inner">
+      <h2>Ready to find your scholarship?</h2>
+      <p>It takes 3 minutes. Your AI agent is ready right now.</p>
+      <button class="btn-hero" onclick="APP.startOnboarding()"><i class="ti ti-sparkles"></i> Find my scholarships — free</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <a class="logo" href="#"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></a>
+        <nav class="footer-links">
+          <a href="#how">How it works</a>
+          <a href="#countries">Countries</a>
+          <a href="#faq">FAQ</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 FindScholarshipForMe. Free for all students worldwide.</span>
+        <span>Made with ❤️ for students everywhere</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /pg-landing -->
+
+<!-- ══════════════════════════════════════════
+     ONBOARDING
+══════════════════════════════════════════ -->
+<div id="pg-onboard" class="pg-hidden">
+  <div class="ob-shell">
+    <div class="ob-sidebar">
+      <a class="logo" href="#" onclick="APP.backToLanding()"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></a>
+      <div class="ob-sidebar-info">
+        <div class="ob-why-title">Why we ask this</div>
+        <div class="ob-why-text" id="ob-why-text">We use your profile to find scholarships you actually qualify for — not generic lists that waste your time.</div>
+        <div class="ob-features">
+          <div class="ob-feat"><i class="ti ti-lock"></i> Saved in your browser only</div>
+          <div class="ob-feat"><i class="ti ti-shield-check"></i> Never shared or sold</div>
+          <div class="ob-feat"><i class="ti ti-refresh"></i> Edit anytime</div>
+        </div>
+      </div>
+    </div>
+    <div class="ob-main">
+      <div class="ob-top-bar">
+        <div class="ob-pips" id="ob-pips">
+          <div class="ob-pip ob-pip-active"></div>
+          <div class="ob-pip"></div>
+          <div class="ob-pip"></div>
+          <div class="ob-pip"></div>
+        </div>
+        <button class="btn-ghost-sm" onclick="APP.backToLanding()"><i class="ti ti-x"></i></button>
+      </div>
+      <div class="ob-content">
+
+        <!-- Step 0 -->
+        <div class="ob-step active" id="obs-0">
+          <div class="ob-step-icon"><i class="ti ti-user-circle"></i></div>
+          <h2>Let's set up your agent</h2>
+          <p class="ob-desc">Your personal AI agent remembers everything and guides your full scholarship journey.</p>
+          <div class="ob-form-grid">
+            <div class="ob-field"><label>Full name</label><input type="text" id="f-name" placeholder="e.g. Fatima Malik" autocomplete="name"/></div>
+            <div class="ob-field"><label>Age</label><input type="number" id="f-age" placeholder="e.g. 21" min="15" max="45"/></div>
+            <div class="ob-field"><label>Your country</label>
+              <select id="f-country"><option value="">Select country...</option><option>Pakistan</option><option>India</option><option>Bangladesh</option><option>Nigeria</option><option>Egypt</option><option>Kenya</option><option>Indonesia</option><option>Ghana</option><option>Nepal</option><option>Sri Lanka</option><option>Ethiopia</option><option>Morocco</option><option>Philippines</option><option>Vietnam</option><option>Iran</option><option>Turkey</option><option>Other</option></select>
+            </div>
+            <div class="ob-field"><label>Financial situation</label>
+              <select id="f-finance"><option value="">Select...</option><option value="low">I need full funding</option><option value="mid">I need partial support</option><option value="ok">I can cover some costs</option><option value="self">Self-funded, want merit awards</option></select>
+            </div>
+          </div>
+          <div class="ob-nav"><div></div><button class="btn-cta" onclick="OB.go(1)">Continue <i class="ti ti-arrow-right"></i></button></div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="ob-step" id="obs-1">
+          <div class="ob-step-icon"><i class="ti ti-school"></i></div>
+          <h2>Your academic background</h2>
+          <p class="ob-desc">Finds scholarships you actually qualify for — no wasted applications.</p>
+          <div class="ob-form-grid">
+            <div class="ob-field"><label>Highest qualification</label>
+              <select id="f-qual"><option value="">Select...</option><option>Matric / O-Levels</option><option>Intermediate / A-Levels / FSc</option><option>Bachelor's degree</option><option>Master's degree</option></select>
+            </div>
+            <div class="ob-field"><label>Field of study</label>
+              <select id="f-field"><option value="">Select...</option><option>Engineering & Technology</option><option>Computer Science & IT</option><option>Medical & Health Sciences</option><option>Business & Management</option><option>Arts & Humanities</option><option>Social Sciences</option><option>Natural Sciences</option><option>Law</option><option>Education</option></select>
+            </div>
+          </div>
+          <div class="ob-field" style="margin-top:1rem"><label>Academic score — <strong id="gpa-display">75%</strong></label>
+            <input type="range" min="50" max="100" value="75" id="f-gpa" class="ob-range" oninput="document.getElementById('gpa-display').textContent=this.value+'%'"/>
+          </div>
+          <div class="ob-field" style="margin-top:1.25rem"><label>English proficiency</label>
+            <div class="chip-group" id="cg-eng">
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-eng')">Beginner</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-eng')">Conversational</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-eng')">IELTS 5.0–5.5</button>
+              <button class="chip on" type="button" onclick="CHIPS.solo(this,'cg-eng')">IELTS 6.0–7.0</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-eng')">IELTS 7.5+</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-eng')">No test yet</button>
+            </div>
+          </div>
+          <div class="ob-nav">
+            <button class="btn-back" onclick="OB.go(0)"><i class="ti ti-arrow-left"></i> Back</button>
+            <button class="btn-cta" onclick="OB.go(2)">Continue <i class="ti ti-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="ob-step" id="obs-2">
+          <div class="ob-step-icon"><i class="ti ti-world"></i></div>
+          <h2>Where do you want to study?</h2>
+          <p class="ob-desc">Select your target degree and preferred countries.</p>
+          <div class="ob-field"><label>Target degree level</label>
+            <div class="chip-group" id="cg-level">
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-level')">Certificate</button>
+              <button class="chip on" type="button" onclick="CHIPS.solo(this,'cg-level')">Bachelor's</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-level')">Master's</button>
+              <button class="chip" type="button" onclick="CHIPS.solo(this,'cg-level')">PhD</button>
+            </div>
+          </div>
+          <div class="ob-field" style="margin-top:1.25rem"><label>Preferred countries <span class="label-note">select all that interest you</span></label>
+            <div class="chip-group" id="cg-dest">
+              <button class="chip on" type="button" onclick="CHIPS.multi(this)">Germany</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">USA</button>
+              <button class="chip on" type="button" onclick="CHIPS.multi(this)">UK</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Canada</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Australia</button>
+              <button class="chip on" type="button" onclick="CHIPS.multi(this)">Turkey</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">China</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">South Korea</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Japan</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Netherlands</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Saudi Arabia</button>
+              <button class="chip" type="button" onclick="CHIPS.multi(this)">Open to any</button>
+            </div>
+          </div>
+          <div class="ob-nav">
+            <button class="btn-back" onclick="OB.go(1)"><i class="ti ti-arrow-left"></i> Back</button>
+            <button class="btn-cta" onclick="OB.go(3)">Continue <i class="ti ti-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="ob-step" id="obs-3">
+          <div class="ob-step-icon"><i class="ti ti-robot"></i></div>
+          <h2>Name your AI agent</h2>
+          <p class="ob-desc">Your agent will remember your full profile and guide you personally through every step.</p>
+          <div class="ob-field" style="max-width:280px">
+            <label>Choose a name</label>
+            <select id="f-agent"><option>Nova</option><option>Aria</option><option>Scout</option><option>Sage</option><option>Atlas</option><option>Lyra</option></select>
+          </div>
+          <div class="agent-promise">
+            <div class="ap-header"><i class="ti ti-sparkles"></i> Your agent will:</div>
+            <div class="ap-items">
+              <div class="ap-item"><i class="ti ti-check"></i> Remember your profile permanently (browser storage)</div>
+              <div class="ap-item"><i class="ti ti-check"></i> Find every scholarship you qualify for</div>
+              <div class="ap-item"><i class="ti ti-check"></i> Guide you step-by-step through applications</div>
+              <div class="ap-item"><i class="ti ti-check"></i> Write your SOP and scholarship essays</div>
+              <div class="ap-item"><i class="ti ti-check"></i> Track deadlines and keep you motivated</div>
+            </div>
+          </div>
+          <div class="ob-nav">
+            <button class="btn-back" onclick="OB.go(2)"><i class="ti ti-arrow-left"></i> Back</button>
+            <button class="btn-cta btn-launch" onclick="APP.launch()"><i class="ti ti-rocket"></i> Launch my agent</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     AGENT DASHBOARD
+══════════════════════════════════════════ -->
+<div id="pg-agent" class="pg-hidden">
+  <div class="agent-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="agent-sidebar" id="agent-sidebar">
+      <div class="as-top">
+        <div class="logo logo-sm"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></div>
+        <div class="as-student" id="as-student">
+          <div class="as-av" id="as-av">ST</div>
+          <div class="as-info"><div class="as-name" id="as-name">Student</div><div class="as-status"><span class="as-dot"></span> Agent active</div></div>
+        </div>
+      </div>
+      <nav class="as-nav">
+        <div class="as-section">Main</div>
+        <button class="as-item active" id="sn-home" onclick="DASH.tab('home')"><i class="ti ti-layout-dashboard"></i> Dashboard</button>
+        <button class="as-item" id="sn-chat" onclick="DASH.tab('chat')"><i class="ti ti-message-circle"></i> Chat with agent <span class="as-badge" id="chat-dot" style="display:none"></span></button>
+        <button class="as-item" id="sn-profile" onclick="DASH.tab('profile')"><i class="ti ti-user"></i> My profile</button>
+        <div class="as-section">Quick actions</div>
+        <button class="as-item" onclick="DASH.quick('Find all scholarships I qualify for with match percentages')"><i class="ti ti-search"></i> Find scholarships</button>
+        <button class="as-item" onclick="DASH.quick('Give me a complete document checklist for my top scholarships')"><i class="ti ti-checklist"></i> Documents needed</button>
+        <button class="as-item" onclick="DASH.quick('Build me a 6-month application timeline starting this month')"><i class="ti ti-calendar"></i> Timeline planner</button>
+        <button class="as-item" onclick="DASH.quick('Help me write a strong Statement of Purpose for my scholarship applications')"><i class="ti ti-writing"></i> Write my SOP</button>
+        <button class="as-item" onclick="DASH.quick('Explain the visa process and living costs for my target countries in detail')"><i class="ti ti-plane"></i> Visa & costs</button>
+        <button class="as-item" onclick="DASH.quick('Motivate me — I am feeling overwhelmed about the scholarship process')"><i class="ti ti-heart"></i> Motivate me</button>
+      </nav>
+      <div class="as-bottom">
+        <div class="as-prog-label">Application progress</div>
+        <div class="as-prog-track"><div class="as-prog-fill" id="prog-fill"></div></div>
+        <div class="as-prog-pct" id="prog-pct">0%</div>
+        <button class="btn-ghost-sm" style="width:100%;margin-top:10px" onclick="APP.reset()"><i class="ti ti-refresh"></i> Reset & start over</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="agent-main">
+      <div class="agent-topbar" id="agent-topbar">
+        <div><div class="atb-title" id="atb-title">Dashboard</div><div class="atb-sub" id="atb-sub"></div></div>
+        <button class="mob-menu-btn" onclick="DASH.toggleSidebar()" aria-label="Menu"><i class="ti ti-menu-2"></i></button>
+      </div>
+
+      <!-- HOME TAB -->
+      <div id="tab-home" class="agent-tab active">
+        <div class="dash-body">
+          <div class="dash-greeting" id="dash-greet">Good day!</div>
+          <div class="dash-sub" id="dash-sub">Your agent is ready.</div>
+          <div class="dash-stats" id="dash-stats">
+            <div class="dstat"><div class="dstat-v" id="ds-matched">12</div><div class="dstat-l">Scholarships matched</div></div>
+            <div class="dstat"><div class="dstat-v" id="ds-tasks">4</div><div class="dstat-l">Tasks remaining</div></div>
+            <div class="dstat"><div class="dstat-v" id="ds-days">47</div><div class="dstat-l">Days to deadline</div></div>
+          </div>
+          <div class="dash-section-hdr">Your next steps</div>
+          <div class="task-list" id="task-list"></div>
+          <div class="dash-section-hdr" style="margin-top:1.5rem">Top matched scholarships</div>
+          <div class="schol-list" id="schol-list"></div>
+          <div style="margin-top:1rem">
+            <button class="btn-cta" onclick="DASH.quick('Find all scholarships I qualify for and rank them by match percentage')">Ask agent for full list <i class="ti ti-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAT TAB -->
+      <div id="tab-chat" class="agent-tab">
+        <div class="chat-shell">
+          <div class="chat-msgs" id="chat-msgs"></div>
+          <div class="chat-suggestions" id="chat-suggestions">
+            <button onclick="DASH.quick('What scholarships am I eligible for?')">My scholarships</button>
+            <button onclick="DASH.quick('What documents do I need to apply?')">Documents needed</button>
+            <button onclick="DASH.quick('Write my SOP')">Write SOP</button>
+            <button onclick="DASH.quick('Visa requirements for my countries')">Visa guide</button>
+            <button onclick="DASH.quick('Motivate me to keep going')">Motivate me</button>
+          </div>
+          <div class="chat-input-bar">
+            <textarea id="chat-input" placeholder="Ask your agent anything..." rows="1" onkeydown="CHAT.key(event)"></textarea>
+            <button class="chat-send" onclick="CHAT.send()" aria-label="Send"><i class="ti ti-send"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE TAB -->
+      <div id="tab-profile" class="agent-tab">
+        <div class="profile-body" id="profile-body"></div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

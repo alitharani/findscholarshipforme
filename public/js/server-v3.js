@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // ── Middleware ───────────────────────────────────
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors({ origin: process.env.ALLOWED_ORIGIN || '*' }));
+app.use(cors({ origin: '*' }));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -363,11 +363,34 @@ var CHAT = {
     state.history.push({role:'user',content:text});
     CHAT.showTyping();
 
-    fetch('/api/chat',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({message:text, profile:state.profile, history:state.history.slice(-12), plan:state.plan})
-    })
+   fetch('https://api.groq.com/openai/v1/chat/completions',{
+  method:'POST',
+  headers:{
+    'Content-Type':'application/json',
+    'Authorization':'Bearer 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'
+  },
+  body:JSON.stringify({
+    model:'llama-3.3-70b-versatile',
+    max_tokens:1024,
+    messages:[
+      {role:'system', content:'You are '+state.profile.agentName+', a personal scholarship agent for '+state.profile.name+' from '+state.profile.country+'. Field: '+state.profile.field+'. Help with scholarships, SOP, documents, visa guidance.'},
+      ...state.history.slice(-10),
+      {role:'user', content:text}
+    ]
+  })
+})
+.then(function(r){ return r.json(); })
+.then(function(d){
+  CHAT.removeTyping();
+  var reply = d.choices[0].message.content;
+  state.history.push({role:'assistant',content:reply});
+  CHAT.addAgent(reply);
+})
+.catch(function(){
+  CHAT.removeTyping();
+  CHAT.addAgent('Connection issue — please try again!');
+});
+return;
     .then(function(r){ return r.json(); })
     .then(function(d){
       CHAT.removeTyping();

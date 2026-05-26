@@ -26,14 +26,18 @@
   <!-- NAV -->
   <header class="nav" id="main-nav">
     <div class="nav-inner">
-      <a class="logo" href="https://findscholarshipforme.com/"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></a>
+      <a class="logo" href="#"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#how">How it works</a>
         <a href="#countries">Countries</a>
+        <a href="/pricing.html">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#about">About</a>
       </nav>
-      <button class="btn-cta" onclick="APP.startOnboarding()">Start free <i class="ti ti-arrow-right"></i></button>
+      <div class="nav-actions">
+        <button class="btn-login" onclick="AUTH.showModal()"><i class="ti ti-user"></i> Login</button>
+        <button class="btn-cta" onclick="APP.startOnboarding()">Start free <i class="ti ti-arrow-right"></i></button>
+      </div>
       <button class="nav-mob-btn" onclick="APP.startOnboarding()" aria-label="Get started"><i class="ti ti-arrow-right"></i></button>
     </div>
   </header>
@@ -107,15 +111,16 @@
     <div class="container">
       <div class="sec-label light">Top destinations</div>
       <h2 class="sec-title light">Where will <em>you</em> study?</h2>
+      <p style="color:rgba(255,255,255,.5);font-size:14px;margin-top:-1.5rem;margin-bottom:2rem">Click any country to explore scholarships with your AI agent</p>
       <div class="countries-grid">
-        <div class="c-card"><div class="c-flag">🇩🇪</div><div class="c-name">Germany</div><div class="c-tag">Free tuition</div><div class="c-desc">DAAD · Böll · Adenauer · €0 tuition at public unis</div></div>
-        <div class="c-card"><div class="c-flag">🇹🇷</div><div class="c-name">Turkey</div><div class="c-tag">Full ride</div><div class="c-desc">Türkiye Burslari · All costs covered · No IELTS</div></div>
-        <div class="c-card"><div class="c-flag">🇨🇳</div><div class="c-name">China</div><div class="c-tag">5,000+ spots</div><div class="c-desc">CSC Scholarship · Stipend + housing + flight</div></div>
-        <div class="c-card"><div class="c-flag">🇰🇷</div><div class="c-name">South Korea</div><div class="c-tag">KGSP</div><div class="c-desc">Full funding · Language training · $900/mo stipend</div></div>
-        <div class="c-card"><div class="c-flag">🇬🇧</div><div class="c-name">United Kingdom</div><div class="c-tag">Prestigious</div><div class="c-desc">Commonwealth · Chevening · Gates Cambridge</div></div>
-        <div class="c-card"><div class="c-flag">🇯🇵</div><div class="c-name">Japan</div><div class="c-tag">MEXT</div><div class="c-desc">Full govt funding · Housing + stipend · Renowned</div></div>
-        <div class="c-card"><div class="c-flag">🇳🇱</div><div class="c-name">Netherlands</div><div class="c-tag">English-taught</div><div class="c-desc">Holland Scholarship · Orange Tulip · 2,000+ English programs</div></div>
-        <div class="c-card"><div class="c-flag">🇨🇦</div><div class="c-name">Canada</div><div class="c-tag">Merit-based</div><div class="c-desc">Vanier · Banting · University-specific awards</div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('Germany','🇩🇪')"><div class="c-flag">🇩🇪</div><div class="c-name">Germany</div><div class="c-tag">Free tuition</div><div class="c-desc">DAAD · Böll · Adenauer · €0 tuition at public unis</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('Turkey','🇹🇷')"><div class="c-flag">🇹🇷</div><div class="c-name">Turkey</div><div class="c-tag">Full ride</div><div class="c-desc">Türkiye Burslari · All costs covered · No IELTS</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('China','🇨🇳')"><div class="c-flag">🇨🇳</div><div class="c-name">China</div><div class="c-tag">5,000+ spots</div><div class="c-desc">CSC Scholarship · Stipend + housing + flight</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('South Korea','🇰🇷')"><div class="c-flag">🇰🇷</div><div class="c-name">South Korea</div><div class="c-tag">KGSP</div><div class="c-desc">Full funding · Language training · $900/mo stipend</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('United Kingdom','🇬🇧')"><div class="c-flag">🇬🇧</div><div class="c-name">United Kingdom</div><div class="c-tag">Prestigious</div><div class="c-desc">Commonwealth · Chevening · Gates Cambridge</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('Japan','🇯🇵')"><div class="c-flag">🇯🇵</div><div class="c-name">Japan</div><div class="c-tag">MEXT</div><div class="c-desc">Full govt funding · Housing + stipend · Renowned</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('Netherlands','🇳🇱')"><div class="c-flag">🇳🇱</div><div class="c-name">Netherlands</div><div class="c-tag">English-taught</div><div class="c-desc">Holland Scholarship · Orange Tulip · 2,000+ English programs</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
+        <div class="c-card c-card-link" onclick="COUNTRY.explore('Canada','🇨🇦')"><div class="c-flag">🇨🇦</div><div class="c-name">Canada</div><div class="c-tag">Merit-based</div><div class="c-desc">Vanier · Banting · University-specific awards</div><div class="c-explore">Explore scholarships <i class="ti ti-arrow-right"></i></div></div>
         <div class="c-card c-card-cta" onclick="APP.startOnboarding()"><div class="c-cta-icon"><i class="ti ti-plus"></i></div><div class="c-name">+46 more</div><div class="c-desc">Find countries matching your profile specifically</div></div>
       </div>
     </div>
@@ -231,7 +236,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 FindScholarshipForMe. Free for all students worldwide.</span>
+        <span>© 2025 FindScholarshipForMe. Free for all students worldwide.</span>
         <span>Made with ❤️ for students everywhere</span>
       </div>
     </div>
@@ -472,6 +477,157 @@
     </main>
   </div>
 </div>
+
+<!-- LOGIN MODAL -->
+<div id="login-modal" class="pg-hidden">
+  <div class="lm-overlay" onclick="AUTH.hideModal()"></div>
+  <div class="lm-box">
+    <button class="lm-close" onclick="AUTH.hideModal()"><i class="ti ti-x"></i></button>
+    <div class="lm-logo"><span class="logo-find">find</span><span class="logo-schol">scholarship</span><span class="logo-forme">forme</span></div>
+    <h3 class="lm-title">Welcome back</h3>
+    <p class="lm-sub">Sign in to continue your scholarship journey</p>
+    <div class="lm-btns">
+      <button class="lm-btn lm-google" onclick="AUTH.google()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z" fill="#34A853"/><path d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+        Continue with Google
+      </button>
+      <div class="lm-divider"><span>or</span></div>
+      <div class="lm-field"><input type="email" id="lm-email" placeholder="Email address" class="lm-input"/></div>
+      <div class="lm-field"><input type="password" id="lm-pass" placeholder="Password" class="lm-input"/></div>
+      <button class="lm-btn lm-email-btn" onclick="AUTH.email()">Continue with email</button>
+      <div class="lm-divider"><span>or</span></div>
+      <div class="lm-field lm-phone-row">
+        <select class="lm-code"><option>+92</option><option>+91</option><option>+1</option><option>+44</option><option>+971</option><option>+234</option><option>+20</option></select>
+        <input type="tel" id="lm-phone" placeholder="Phone number" class="lm-input"/>
+      </div>
+      <button class="lm-btn lm-phone-btn" onclick="AUTH.phone()"><i class="ti ti-device-mobile"></i> Continue with phone</button>
+    </div>
+    <p class="lm-footer">New here? <a href="#" onclick="AUTH.hideModal();APP.startOnboarding()">Create free account</a></p>
+  </div>
+</div>
+
+<style>
+/* Nav updates */
+.nav-actions{display:flex;align-items:center;gap:8px}
+.btn-login{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;font-size:14px;border-radius:var(--r-md);background:transparent;color:var(--text);border:1px solid var(--gray-1);cursor:pointer;font-family:'DM Sans',sans-serif}
+.btn-login:hover{background:var(--tint)}
+
+/* Country card clickable */
+.c-card-link{cursor:pointer;position:relative}
+.c-card-link:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);transform:translateY(-2px)}
+.c-explore{font-size:12px;color:rgba(255,255,255,.4);margin-top:8px;display:flex;align-items:center;gap:4px;transition:color .2s}
+.c-card-link:hover .c-explore{color:#7dd3fc}
+
+/* Login modal */
+#login-modal{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:1rem}
+.lm-overlay{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
+.lm-box{position:relative;background:#fff;border-radius:20px;padding:2rem;max-width:400px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.lm-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:8px;background:#f1f5f9;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:16px}
+.lm-logo{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-bottom:1.25rem;text-align:center}
+.lm-title{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:600;text-align:center;margin-bottom:.375rem}
+.lm-sub{font-size:13px;color:#64748b;text-align:center;margin-bottom:1.5rem}
+.lm-btns{display:flex;flex-direction:column;gap:10px}
+.lm-btn{width:100%;padding:11px;font-size:14px;font-weight:500;border-radius:10px;border:1px solid #e2e8f0;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s}
+.lm-google{background:#fff;color:#0f172a}
+.lm-google:hover{background:#f8fafc;border-color:#cbd5e1}
+.lm-email-btn{background:#0f172a;color:#fff;border-color:#0f172a}
+.lm-email-btn:hover{background:#1e293b}
+.lm-phone-btn{background:#2563eb;color:#fff;border-color:#2563eb}
+.lm-phone-btn:hover{background:#1d4ed8}
+.lm-divider{display:flex;align-items:center;gap:10px;font-size:12px;color:#94a3b8}
+.lm-divider::before,.lm-divider::after{content:'';flex:1;height:1px;background:#e2e8f0}
+.lm-field{display:flex;gap:8px}
+.lm-input{width:100%;padding:10px 12px;font-size:14px;border:1px solid #e2e8f0;border-radius:10px;font-family:'DM Sans',sans-serif;background:#fff;color:#0f172a}
+.lm-input:focus{outline:none;border-color:#2563eb}
+.lm-code{padding:10px 8px;font-size:13px;border:1px solid #e2e8f0;border-radius:10px;background:#fff;color:#0f172a;cursor:pointer;font-family:'DM Sans',sans-serif;flex-shrink:0}
+.lm-phone-row{display:flex;gap:8px}
+.lm-footer{font-size:13px;color:#64748b;text-align:center;margin-top:1rem}
+.lm-footer a{color:#2563eb;font-weight:500}
+</style>
+
+<script>
+// Country explore → goes to agent with pre-filled question
+var COUNTRY = {
+  explore: function(country, flag) {
+    var saved = localStorage.getItem('fsmf_v3');
+    if(saved) {
+      // Profile exists — go to agent and ask about country
+      var profile = JSON.parse(saved);
+      // Store pending country query
+      localStorage.setItem('fsmf_country_query', 'Tell me about scholarships in ' + country + ' ' + flag + ' — what scholarships am I eligible for, costs, deadlines, and how to apply?');
+      // Go to agent
+      show('pg-agent');
+      hide('pg-landing');
+      DASH.init();
+      setTimeout(function() {
+        DASH.tab('chat');
+        setTimeout(function() {
+          var q = localStorage.getItem('fsmf_country_query');
+          if(q) {
+            localStorage.removeItem('fsmf_country_query');
+            var inp = document.getElementById('chat-input');
+            if(inp) inp.value = q;
+            CHAT.send();
+          }
+        }, 300);
+      }, 200);
+    } else {
+      // No profile — start onboarding with country pre-selected
+      localStorage.setItem('fsmf_pending_country', country);
+      APP.startOnboarding();
+    }
+    window.scrollTo(0,0);
+  }
+};
+
+// Auth modal
+var AUTH = {
+  showModal: function() {
+    var m = document.getElementById('login-modal');
+    if(m) m.classList.remove('pg-hidden');
+  },
+  hideModal: function() {
+    var m = document.getElementById('login-modal');
+    if(m) m.classList.add('pg-hidden');
+  },
+  google: function() {
+    alert('Google login coming soon! For now, create a free account to get started.');
+    AUTH.hideModal();
+    APP.startOnboarding();
+  },
+  email: function() {
+    var email = document.getElementById('lm-email').value;
+    if(!email) { alert('Please enter your email address.'); return; }
+    alert('Email login coming soon! For now, create a free account to get started.');
+    AUTH.hideModal();
+    APP.startOnboarding();
+  },
+  phone: function() {
+    var phone = document.getElementById('lm-phone').value;
+    if(!phone) { alert('Please enter your phone number.'); return; }
+    alert('Phone login coming soon! For now, create a free account to get started.');
+    AUTH.hideModal();
+    APP.startOnboarding();
+  }
+};
+
+// Check pending country after onboarding
+document.addEventListener('DOMContentLoaded', function() {
+  var pendingCountry = localStorage.getItem('fsmf_pending_country');
+  if(pendingCountry) {
+    // Pre-select this country in onboarding chips
+    localStorage.removeItem('fsmf_pending_country');
+    setTimeout(function() {
+      var chips = document.querySelectorAll('#cg-dest .chip');
+      chips.forEach(function(c) {
+        if(c.textContent.trim() === pendingCountry) {
+          c.classList.add('on');
+        }
+      });
+    }, 500);
+  }
+});
+</script>
 
 <script src="/js/app.js"></script>
 </body>
